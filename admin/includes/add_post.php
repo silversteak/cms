@@ -61,11 +61,18 @@
     <input type="text" required class="form-control" name="post_author">
   </div>
  
- <div class="form-group">
+<div class="form-group">
     <label for="post_status">Post Status</label>
-    <input type="text" class="form-control" name="post_status"> 
-  </div>
+    <select name="post_status" id="">
+      <option value="published">Publish</option>
+      <option value="draft">Draft</option>
 
+    </select>
+
+
+    <!-- <input value="<?php //echo $post_status; ?>" type="text" class="form-control" name="post_status"> --> 
+  </div>
+  
   <div class="form-group">
     <label for="post_img">Image input</label>
     <input type="file" name="post_img">
