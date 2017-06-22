@@ -10,7 +10,7 @@
     while($row = mysqli_fetch_assoc($select_particular_user)){
       $username= $row['username'];
       $user_password= $row['user_password'];
-
+      $salt = $row['user_randSalt'];
       $user_firstName = $row['user_firstname']; 
       $user_lastName = $row['user_lastname']; 
       $user_email = $row['user_email']; 
@@ -19,7 +19,8 @@
 
   }
 
-
+  $user_password = crypt($user_password, $salt);
+  
   }
 
  ?>
@@ -48,6 +49,9 @@
 
             $username = mysqli_real_escape_string($connect, $username);
             $user_password = mysqli_real_escape_string($connect, $user_password);
+
+                //$salt = $row['user_randSalt'];
+                $user_password = crypt($user_password, $salt);
 
              /*$hashFormat = "$2y$10$";
              $salt = "thisissomethingcrazy22characters";

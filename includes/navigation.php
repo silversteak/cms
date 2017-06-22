@@ -29,19 +29,12 @@
                      ?>
 
                      <li><a href="admin">Admin</a></li>
-
-                   <!--  <li>
-                        <a href="#">About</a>
-                    </li>
-                    <li>
-                        <a href="#">Services</a>
-                    </li>
-                    <li>
-                        <a href="#">Contact</a>
-                    </li> -->
                 
 
                 </ul>
+
+                <ul class="nav navbar-nav navbar-right">
+                <li><a href="registration.php"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
             </div>
             <!-- /.navbar-collapse -->
         </div>

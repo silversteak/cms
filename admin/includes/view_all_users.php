@@ -3,7 +3,7 @@
                             <tr>
                                <th>ID</th>
                                <th>Username</th>
-                               <th>Password</th>
+                               <!-- //<th>Password</th> -->
                                <th>First Name</th>
                                <th>Last Name</th>
                                <th>Email</th>
@@ -36,13 +36,13 @@
     echo "<tr>";
     echo "<td>$user_id</td>";
     echo "<td>$username</td>";
-    echo "<td>$user_password</td>";
+    //echo "<td>$user_password</td>";
     echo "<td>$user_firstname</td>";
     echo "<td>$user_lastname</td>";
     echo "<td>$user_email</td>";
     echo "<td>$user_dob</td>";
     
-    echo "<td><img src='../images/$user_image' class = 'img-thumbnail' height= '50' width='150'</td>";
+    echo "<td><img src='../images/$user_image'  height= '80px' width='80px'</td>";
     echo "<td>$user_role</td>";
    
 
@@ -52,7 +52,7 @@
 
     
     echo "<td><a href='users.php?change_to_admin={$user_id}'>Admin</a></td>";
-    echo "<td><a href='users.php?change_to_subscriber={$user_id}'>sSubscriber</a></td>";
+    echo "<td><a href='users.php?change_to_subscriber={$user_id}'>Subscribe</a></td>";
     echo "<td><a href='users.php?delete={$user_id}'>Delete</a></td>";
     echo "<td><a href='users.php?source=edit_user&user_id={$user_id}'>Edit</a></td>";
     echo "</tr>";

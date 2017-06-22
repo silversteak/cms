@@ -29,6 +29,7 @@
       echo $user_role = $row['user_role']; 
       }
 
+      $password = crypt($password, $user_password);
       if($username == $db_username && $password == $user_password){
       	
       	$_SESSION['username'] = $username;
